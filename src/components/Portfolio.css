@@ -1,0 +1,147 @@
+/* Mobile First Styles */
+#projects {
+    background-color: #fdf5e6;
+}
+
+#projects h2 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    transition: transform 0.4s, box-shadow 0.4s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+.project-image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.btn-project {
+    background-color: #ff8c42;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: background-color 0.3s, transform 0.4s, opacity 0.4s;
+}
+
+.project-card:hover .btn-project {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.btn-project:hover {
+    background-color: #e57a35;
+}
+
+.project-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.tech-badge {
+    background-color: #fcecdf;
+    color: #333;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+/* Tablet (≥ 768px) */
+@media (min-width: 768px) {
+    #projects h2 {
+        font-size: 2.2em;
+        margin-bottom: 50px;
+    }
+
+    .project-image {
+        height: 240px;
+    }
+
+    .project-content {
+        padding: 25px;
+    }
+
+    .project-title {
+        font-size: 1.4em;
+    }
+}
+
+/* Laptop (≥ 1024px) */
+@media (min-width: 1024px) {
+    #projects h2 {
+        font-size: 2.5em;
+    }
+
+    .project-title {
+        font-size: 1.5em;
+    }
+}

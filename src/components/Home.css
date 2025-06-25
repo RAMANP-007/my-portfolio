@@ -1,0 +1,126 @@
+/* Mobile First Styles */
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fdf5e6 30%, #fffaf5 100%);
+    padding: 100px 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.intro-text {
+    max-width: 600px;
+    z-index: 2;
+}
+
+.intro-text h4 {
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #666;
+}
+
+.intro-text h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #333;
+    margin: 10px 0;
+}
+
+.intro-text p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff8c42;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 140, 66, 0.4);
+}
+
+.btn:hover {
+    background-color: #ff701a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 140, 66, 0.5);
+}
+
+.intro-image {
+    max-width: 220px;
+    margin: 40px auto 0;
+    border-radius: 45% 55% 60% 40% / 65% 50% 50% 35%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    animation: blob-float 10s ease-in-out infinite;
+    transition: all 0.4s ease-in-out;
+}
+
+.intro-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.18);
+}
+
+@keyframes blob-float {
+  0% {
+    transform: translateY(0);
+    border-radius: 45% 55% 60% 40% / 65% 50% 50% 35%;
+  }
+  50% {
+    transform: translateY(-15px);
+    border-radius: 55% 45% 50% 50% / 60% 40% 60% 40%;
+  }
+  100% {
+    transform: translateY(0);
+    border-radius: 45% 55% 60% 40% / 65% 50% 50% 35%;
+  }
+}
+
+/* Tablet (≥ 768px) */
+@media (min-width: 768px) {
+    .home-section {
+        text-align: left;
+    }
+
+    .intro-text h1 {
+        font-size: 3em;
+    }
+
+    .intro-image {
+        margin: 0;
+        max-width: 260px;
+    }
+}
+
+/* Laptop (≥ 1024px) */
+@media (min-width: 1024px) {
+    .intro-text h1 {
+        font-size: 3.5em;
+    }
+
+    .intro-text h4 {
+        font-size: 1.8em;
+    }
+
+    .intro-text p {
+        font-size: 1.2em;
+    }
+
+    .intro-image {
+        max-width: 280px;
+    }
+}
