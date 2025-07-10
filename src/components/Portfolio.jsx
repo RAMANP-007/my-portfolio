@@ -5,6 +5,8 @@ import pizzaAppImg from '../assets/pizzaapp.jpg.png';
 import shopmeniaImg from '../assets/shopmenia.jpg.png';
 import weatherAppImg from '../assets/weatherapp.jpg.png';
 import bhagavadGitaImg from '../assets/123.png';
+import eventscheduler from '../assets/eventscheduler.png';
+import evecafe from '../assets/evecafe.png';
 
 const projects = [
   {
@@ -37,7 +39,24 @@ const projects = [
     description: 'A simple application to check the weather for a given city.',
     tech: ['React', 'JavaScript', 'API'],
     githubUrl: 'https://github.com/RAMANP-007/weather-app.git',
-    imageUrl: weatherAppImg,  },
+    imageUrl: weatherAppImg,
+  },
+  {
+    id: 6,
+    title: 'AI Event Scheduler',
+    description: 'An AI-powered event scheduler to help you manage your events.',
+    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'AI'],
+    githubUrl: 'https://github.com/RAMANP-007/event-sheduler.git',
+    imageUrl: eventscheduler,
+  },
+  {
+    id: 7,
+    title: 'Eve-Cafe',
+    description: 'A website for a cafe with a menu, gallery, and contact information.',
+    tech: ['React', 'Node.js', 'Express', 'MongoDB'],
+    githubUrl: 'https://github.com/RAMANP-007/eve-cafe.git',
+    imageUrl: evecafe,
+  },
 ];
 
 const Portfolio = () => {
